@@ -1,0 +1,138 @@
+/* App.css */
+
+/* Reset some default styling */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  height: 100%;
+  background-color: #f0f2f5; /* Light gray background for the app */
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.navbar {
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 3D shadow effect */
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.upload-section {
+  display: flex;
+  align-items: center;
+}
+
+.upload-icon, .circle-icon {
+  margin-right: 10px;
+  color: #007bff; /* Use a primary color for the icons */
+  font-size: 1.2em;
+}
+
+.upload-text {
+  font-size: 1em;
+  color: #333;
+}
+
+.main-content {
+  margin-top: 60px; /* Space for fixed navbar */
+  flex: 1;
+  overflow-y: auto;
+}
+
+.text-area-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.text-area-box {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 3D shadow effect */
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.text-area-box textarea {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 1em;
+  outline: none;
+  resize: none;
+}
+
+.text-area-box button {
+  align-self: flex-end;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1em;
+  margin-top: 10px;
+}
+
+.text-area-box button:hover {
+  background-color: #0056b3;
+}
+
+.answer-box {
+  width: 60%;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 3D shadow effect */
+  padding: 20px;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+
+.uploaded-file {
+  margin-left: 20px; /* Adjust as needed */
+}
+
+.upload-section {
+  display: flex;
+  align-items: center;
+}
+
+.upload-icon {
+  margin-right: 10px; /* Adjust as needed */
+}
+
+.upload-text {
+  margin-right: 10px; /* Adjust as needed */
+}
+
+.circle-icon {
+  margin-right: 10px; /* Adjust as needed */
+}
