@@ -16,25 +16,33 @@ function Navbar() {
       alert('Please select a file first!');
       return;
     }
-
+  
     const formData = new FormData();
     formData.append('image', selectedFile); // Ensure 'file' matches the field name expected by multer
-    console.log(formData); // Ensure 'file' matches the field name expected by multer
-
+  
     try {
       const response = await axios.post('http://localhost:8080/api/nilesh/upload', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
       });
-      console.log(response.data);
-      setUploadedFileUrl(`http://localhost:8080/uploads/${response.data.file.filename}`);
-      alert('File uploaded successfully!');
+  
+      // Log the complete response to understand its structure
+      console.log('Server Response:', response.data);
+  
+      // Check if response.data.file and response.data.file.filename exist
+      if (response.data.file && response.data.file.filename) {
+        setUploadedFileUrl(`http://localhost:8080/uploads/${response.data.file.filename}`);
+        alert('File uploaded successfully!');
+      } else {
+        throw new Error('Invalid response structure');
+      }
     } catch (error) {
       console.error('Error uploading file:', error.response ? error.response.data : error.message);
       alert('Failed to upload file.');
     }
   };
+  
 
   const handleFileRemove = () => {
     setSelectedFile(null);

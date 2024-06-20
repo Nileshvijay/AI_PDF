@@ -6,4 +6,6 @@ const { uploadFile } = require('../controller/fileUploadController');
 // POST route for file upload
 router.post('/upload', upload.single('image'), uploadFile);
 
+
+
 module.exports = router;
